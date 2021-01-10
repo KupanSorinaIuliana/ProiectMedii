@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMedii.Page3"
+             xmlns:local="clr-namespace:ProiectMedii"
+             BackgroundColor="LightYellow">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Text="Edit this job" TextColor="OrangeRed" FontSize="Title"/>
+                <Editor  Placeholder="Nume job" Margin="20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="50" Text="{Binding Nume}" PlaceholderColor="Chocolate" TextColor="Chocolate">
+                    <Editor.Behaviors>
+                        <local:ValidationBehaviour />
+                    </Editor.Behaviors>
+                </Editor>
+                <Editor Placeholder="Descriere" Margin="20" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="50" Text="{Binding Descriere}" PlaceholderColor="Chocolate" TextColor="Chocolate">
+                    <Editor.Behaviors>
+                        <local:ValidationBehaviour />
+                    </Editor.Behaviors>
+                </Editor>
+                <Editor  Margin="20" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="50" Text="{Binding Date}" TextColor="Chocolate">
+                    <Editor.Behaviors>
+                        <local:ValidationBehaviour />
+                    </Editor.Behaviors>
+                </Editor>
+                <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="Prioritate:" TextColor="Chocolate" FontSize="Medium"/>
+                <Editor Placeholder="Prioritate" Margin="20" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="50"  PlaceholderColor="Chocolate" TextColor="Chocolate" Text="{Binding PriorityId}">
+                    <Editor.Behaviors>
+                        <local:ValidationBehaviour />
+                    </Editor.Behaviors>
+                </Editor>
+                <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="Save" BackgroundColor="BurlyWood" Clicked="Save_btn"/>
+                <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Text="Cancel" BackgroundColor="BurlyWood" Clicked="Cancel_btn"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

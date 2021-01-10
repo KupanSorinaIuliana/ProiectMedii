@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMedii.ToDoEntryPage"
+             BackgroundColor="LightYellow">
+    <ContentPage.Content >
+        <StackLayout Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Keep up with your jobs" TextColor="OrangeRed" FontSize="Title" />
+                <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Text="Set your own types of priorities" BackgroundColor="Chocolate" Clicked="PriorityButton"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="To do" />
+                <Button Grid.Row="3" Grid.Column="2" Text="+" BackgroundColor="BurlyWood" Clicked="ToDoButton"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="In progress" />
+                <Button Grid.Row="4" Grid.Column="2" Text="+" BackgroundColor="BurlyWood" Clicked="InProgressButton"/>
+                <Label Grid.Row="5" Grid.Column="0" Text="Done" />
+                <Button Grid.Row="5" Grid.Column="2" Text="+" BackgroundColor="BurlyWood" Clicked="DoneButton"/>
+                <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3"  Text="See all your jobs" Padding="30" BackgroundColor="Chocolate" Clicked="JobsButton"/>
+                <Button Grid.Row="8" Grid.Column="2" Text="Condition" BackgroundColor="Bisque" Clicked="ConditionButton" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
